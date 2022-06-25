@@ -1,5 +1,8 @@
 .header {
     background-color: cadetblue;
-    padding: 5px;
-    min-height: 20px;
+    min-width: 360px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: right;
+
 }
