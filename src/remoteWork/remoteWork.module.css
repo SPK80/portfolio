@@ -1,0 +1,24 @@
+.remoteWorkBlock {
+    height: 20vh;
+}
+
+.remoteWorkContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.remoteWorkContainer > div {
+
+}
+
+.remoteWorkContainer > a {
+    padding: 10px;
+    background: limegreen;
+    border-radius: 3px;
+    border: 1px solid orange;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: mediumblue;
+}

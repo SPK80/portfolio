@@ -3,7 +3,7 @@ import s from './main.module.css'
 import sContainer from '../common/styles/container.module.css'
 
 export const Main = () =>
-    <div className={s.main}>
+    <div id="main" className={s.main}>
         <div className={sContainer.container}>
             <div className={s.text}>
                 <span>Hi!</span>
