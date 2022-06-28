@@ -9,7 +9,7 @@
 }
 
 .photo {
-    width: 300px;
-    height: 400px;
+    width: 100%;
+    max-width: 300px;
     background-color: gold;
 }

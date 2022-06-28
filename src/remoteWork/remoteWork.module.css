@@ -1,15 +1,18 @@
 .remoteWorkBlock {
-    height: 20vh;
+    background-color: lightyellow;
 }
 
 .remoteWorkContainer {
+    padding-bottom: 10px;
+    padding-top: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.remoteWorkContainer > div {
-
+.remoteWorkContainer > h2 {
+    margin: 0 15px 10px;
+    text-align: center;
 }
 
 .remoteWorkContainer > a {

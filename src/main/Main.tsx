@@ -10,8 +10,6 @@ export const Main = () =>
                 <h2>I am Pavel Sukonkin</h2>
                 <span>A front-end developer</span>
             </div>
-            <div className={s.photo}>
-            
-            </div>
+            <img className={s.photo} src={'https://avatars.githubusercontent.com/u/36849366?v=4'} alt={'photo'}/>
         </div>
     </div>
