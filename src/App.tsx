@@ -6,6 +6,7 @@ import {Skills} from "./skills/Skills";
 import {Projects} from "./projects/Projects";
 import {RemoteWork} from "./remoteWork/RemoteWork";
 import {Contacts} from "./contacts/Contacts";
+import {Footer} from "./footer/Footer";
 
 class App extends React.Component {
     render() {
@@ -17,6 +18,7 @@ class App extends React.Component {
                 <Projects/>
                 <RemoteWork/>
                 <Contacts/>
+                <Footer/>
             </div>
         );
     }
