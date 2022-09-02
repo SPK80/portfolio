@@ -9,5 +9,8 @@
 }
 
 .container > h2 {
-    background-color: greenyellow;
+    font-size: 24px;
+    color: var(--main-color);
+    font-family: var(--font-family-extra);
+    font-weight: 600;
 }
