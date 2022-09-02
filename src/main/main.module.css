@@ -1,5 +1,7 @@
 .main {
-    background-color: palegoldenrod;
+    background-color: inherit;
+    background-image: url("../assets/main-background.jpg");
+
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -7,12 +9,30 @@
 }
 
 .text {
-    width: 300px;
-    background-color: white;
+    color: var(--light-text-color);
+    word-break: break-word;
+    text-align: center;
+}
+
+.hello {
+}
+
+.name {
+    font-size: 35px;
+    margin-bottom: 14px;
+}
+
+.job {
+    font-size: 18px;
+    margin-bottom: 15px;
 }
 
 .photo {
     width: 100%;
-    max-width: 300px;
-    background-color: gold;
+    max-width: 200px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 12px;
+
 }
