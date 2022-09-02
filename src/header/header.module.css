@@ -1,8 +1,12 @@
 .header {
-    /*position: absolute;*/
-    display: flex;
+    position: fixed;
     width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
     justify-content: right;
     align-items: center;
-    /*background-color: rgb(15 23 42);*/
+    background-color: inherit;
 }
