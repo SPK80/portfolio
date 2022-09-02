@@ -3,4 +3,5 @@
     color: var(--main-color);
     font-family: var(--font-family-extra);
     font-weight: 600;
+    margin: 2em 0;
 }

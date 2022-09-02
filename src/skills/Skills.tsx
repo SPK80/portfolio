@@ -33,8 +33,14 @@ export const Skills = () => (
         <div className={`${sContainer.container} ${s.skillsContainer}`}>
             <Title>Skills</Title>
             <div className={s.skills}>
-                {skillsData.map((sd, index) =>
-                    <Skill key={index} title={sd.title}>{sd.description}</Skill>)}
+                {
+                    skillsData.map((sd, index) =>
+                        <Skill
+                            key={index}
+                            title={sd.title}
+                        >{sd.description}
+                        </Skill>
+                    )}
             </div>
         </div>
     </div>
