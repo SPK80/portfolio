@@ -1,21 +1,19 @@
-.remoteWorkBlock {
-    background-color: lightyellow;
-}
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
 
 .remoteWorkContainer {
-    padding-bottom: 10px;
-    padding-top: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+  @include oneColumnContainer(100%, space-between);
+  align-content: center;
+  flex-direction: column;
+  padding: 100px 10%;
 
-.remoteWorkContainer > h2 {
+  h2 {
+    @include titleText(20px, $secondary-color);
     margin: 0 15px 10px;
     text-align: center;
-}
+  }
 
-.remoteWorkContainer > a {
+  a {
     padding: 10px;
     background: limegreen;
     border-radius: 3px;
@@ -24,4 +22,5 @@
     text-transform: uppercase;
     text-align: center;
     color: mediumblue;
+  }
 }
