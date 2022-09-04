@@ -1,0 +1,30 @@
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
+
+.contactsContainer {
+  @include oneColumnContainer(80vw, flex-start);
+  background-color: $contacts-background-color;
+  border-radius: $container-border-radius;
+  padding: 110px 100px;
+
+  .encouragement {
+    letter-spacing: 0;
+    font-family: $font-family-extra;
+    font-weight: 600;
+
+    & div:nth-child(1) {
+      font-size: 20px;
+      color: $main-color;
+    }
+
+    & div:nth-child(2) {
+      font-size: 34px;
+      color: $third-color;
+    }
+  }
+
+  .formAndInfoContainer {
+    @include boxContainer(100%, 100%, normal, normal);
+    margin-top: 20px;
+  }
+}

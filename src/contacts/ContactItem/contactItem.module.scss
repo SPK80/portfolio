@@ -1,0 +1,16 @@
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
+
+.contactItem {
+  margin: 10px;
+
+  .title {
+    @include titleText(21px, $third-color);
+    margin-bottom: 6px;
+  }
+
+  .content {
+    @include regularText();
+    color: $second-text-color;
+  }
+}
