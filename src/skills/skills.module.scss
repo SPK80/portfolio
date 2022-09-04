@@ -1,0 +1,7 @@
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
+
+.skillsContainer {
+  @include boxContainer(80vw, 100vh, space-between, flex-start);
+}
+

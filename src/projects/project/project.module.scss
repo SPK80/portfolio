@@ -1,15 +1,11 @@
-.project {
-    background-color: #a5cbf7;
-    border: 1px solid navy;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    padding: 10px;
-    width: 264px;
-}
+@import '../../common/styles/sass/variables';
+@import '../../common/styles/sass/mixins';
 
-.project > div {
+.project {
+  @include oneColumnContainer(264px, center);
+  padding: 10px;
+
+  div {
     max-width: 242px;
     width: 100%;
     height: 242px;
@@ -19,28 +15,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    border-radius: $container-border-radius;
 
-.project > div > a {
-    padding: 10px;
-    background: greenyellow;
-    border-radius: 3px;
-    border: 1px solid orange;
-    color: mediumblue;
-    text-decoration: none;
-    text-transform: uppercase;
-    text-align: center;
-}
+    a {
+      padding: 10px;
+      background: greenyellow;
+      border-radius: 3px;
+      border: 1px solid orange;
+      color: mediumblue;
+      text-decoration: none;
+      text-transform: uppercase;
+      text-align: center;
+    }
+  }
 
-.project > h3 {
-    margin: 5px 0;
-    background-color: orange;
-}
+  h3 {
+    @include titleText(16px, $secondary-color);
+    margin: 5px 10px;
+  }
 
-.project > span {
+  span {
     display: inline-block;
     max-width: 256px;
     word-break: break-word;
     font-style: italic;
     background-color: wheat;
+  }
 }

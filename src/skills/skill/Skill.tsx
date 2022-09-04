@@ -1,11 +1,10 @@
-import React, {CSSProperties, ReactNode} from "react";
-import s from './skill.module.css'
+import React, {ReactNode} from "react";
+import s from './skill.module.scss'
 
 type SkillPropsType = {
     title: string
     iconClass?: string
     children: ReactNode
-    style?: CSSProperties | undefined
 }
 
 export const Skill: React.FC<SkillPropsType> =
@@ -13,7 +12,6 @@ export const Skill: React.FC<SkillPropsType> =
          title,
          iconClass,
          children,
-         style,
      }) =>
         <div className={s.skill}>
             <div className={iconClass}></div>

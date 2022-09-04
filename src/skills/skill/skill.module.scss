@@ -1,0 +1,23 @@
+@import '../../common/styles/sass/variables';
+@import '../../common/styles/sass/mixins';
+
+.skill {
+  @include oneColumnContainer(240px, center);
+  background-color: transparent;
+  padding: 10px;
+
+  div {
+    width: 60px;
+    height: 60px;
+    background-color: peachpuff;
+  }
+
+  .title {
+    @include titleText(18px, $secondary-color)
+  }
+
+  .description {
+    @include regularText();
+    text-align: justify;
+  }
+}
