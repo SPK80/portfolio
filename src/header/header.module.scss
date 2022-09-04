@@ -1,0 +1,15 @@
+@import '../common/styles/sass/variables';
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  background-color: inherit;
+  border-bottom: solid 1px $line-color;
+}

@@ -1,0 +1,8 @@
+@import '../../styles/sass/variables';
+@import '../../styles/sass/mixins';
+
+.title {
+  @include titleText(20px, $main-color);
+  margin: 1em 0;
+  text-align: center;
+}
