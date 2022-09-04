@@ -1,7 +1,6 @@
 import React from "react";
-import s from './skills.module.scss'
 import {Skill} from "./skill/Skill";
-import {Title} from "../common/components/title/Title";
+import {ContainerWithTitle} from "../common/components/ContainerWithTitle/ContainerWithTitle";
 
 type SkillData = {
     title: string
@@ -27,24 +26,15 @@ const skillsData: SkillData[] = [
     },
 ]
 
-export const Skills = () => (
-    <div id="skills">
-        <Title>Skills</Title>
-        <div className={s.skillsContainer}>
-            {/*<div style={{width: 150, border: "solid 1px black"}}>1</div>*/}
-            {/*<div style={{width: 150, border: "solid 1px black"}}>2</div>*/}
-            {/*<div style={{width: 150, border: "solid 1px black"}}>3</div>*/}
-            {/*<div style={{width: 150, border: "solid 1px black"}}>4</div>*/}
-            
-            {
-                skillsData.map((sd, index) =>
-                    <Skill
-                        key={index}
-                        title={sd.title}
-                    >{sd.description}
-                    </Skill>
-                )
-            }
-        </div>
-    </div>
-)
+export const Skills = () =>
+    <ContainerWithTitle title="Skills" id="skills">
+        {
+            skillsData.map((sd, index) =>
+                <Skill
+                    key={index}
+                    title={sd.title}
+                >{sd.description}
+                </Skill>
+            )
+        }
+    </ContainerWithTitle>

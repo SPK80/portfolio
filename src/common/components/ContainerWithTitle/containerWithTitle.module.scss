@@ -1,0 +1,10 @@
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
+
+.container {
+  @include oneColumnContainer(80%, center);
+
+  .contentContainer {
+    @include boxContainer(100%, 90vh, space-between, flex-start);
+  }
+}
