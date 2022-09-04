@@ -1,0 +1,72 @@
+@import "variables";
+
+@mixin regularText() {
+  font-family: $font-family-main;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0;
+  color: $regular-text-color;
+}
+
+@mixin titleText($size, $color) {
+  font-family: $font-family-extra;
+  font-weight: 600;
+  font-size: $size;
+  letter-spacing: 0;
+  color: $color;
+}
+
+@mixin navText($color) {
+  @include titleText(18px, $color);
+}
+
+@mixin boxContainer($width, $minHeight, $justify, $align) {
+  width: $width;
+  min-height: $minHeight;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: $justify;
+  align-content: $align;
+}
+
+@mixin fullScreenContainer($justify, $align) {
+  @include boxContainer(100%, 100%, $justify, $align);
+  height: 100vh;
+}
+
+@mixin oneColumnContainer($width, $align) {
+  @include boxContainer($width, auto, flex-start, flex-start);
+  flex-direction: column;
+  align-items: $align;
+}
+
+@mixin submitButton() {
+  display: inline-block;
+  @include titleText(18px, $third-color);
+  text-transform: none;
+  padding: 20px 40px;
+  transition: all .3s ease;
+  width: 100%;
+  text-align: center;
+  border-radius: 5px;
+  background-color: $main-color;
+  &:hover {
+    background-color: $third-color;
+    color: $secondary-color;
+  }
+}
+
+@mixin textInput() {
+  @include regularText();
+  font-size: 18px;
+  width: 100%;
+  border: none;
+  background-color: $third-color;
+  border-radius: 5px;
+  box-sizing: border-box;
+  height: 60px;
+  padding: 25px;
+  vertical-align: middle;
+  transition: all .3s ease;
+}
