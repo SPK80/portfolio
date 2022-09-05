@@ -1,20 +1,20 @@
-import React, {ReactNode} from "react";
+import React, {CSSProperties, ReactNode} from "react";
 import s from './skill.module.scss'
 
 type SkillPropsType = {
     title: string
-    iconClass?: string
+    iconStyle?: CSSProperties | undefined;
     children: ReactNode
 }
 
 export const Skill: React.FC<SkillPropsType> =
     ({
          title,
-         iconClass,
+         iconStyle,
          children,
      }) =>
         <div className={s.skill}>
-            <div className={iconClass}></div>
+            <div style={iconStyle}></div>
             <h3 className={s.title}>{title}</h3>
             <p className={s.description}>{children}</p>
         </div>

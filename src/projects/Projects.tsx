@@ -26,12 +26,13 @@ export const Projects = () => {
             image: "counter.jpg",
         },
     ]
-    
+
     return (
         <ContainerWithTitle title="Projects" id="projects">
             {
-                projectsData.map(pd =>
+                projectsData.map((pd, index) =>
                     <Project
+                        key={index}
                         style={{backgroundImage: `url(${require('../assets/' + pd.image)})`}}
                         title={pd.title}
                         description={pd.description}
