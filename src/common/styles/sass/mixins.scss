@@ -21,9 +21,9 @@
   @include titleText(18px, $color);
 }
 
-@mixin boxContainer($width, $minHeight, $justify, $align) {
+@mixin boxContainer($width, $height, $justify, $align) {
   width: $width;
-  min-height: $minHeight;
+  height: $height;
   display: flex;
   flex-wrap: wrap;
   justify-content: $justify;
@@ -36,7 +36,7 @@
 }
 
 @mixin oneColumnContainer($width, $align) {
-  @include boxContainer($width, auto, flex-start, flex-start);
+  @include boxContainer($width, fit-content, flex-start, flex-start);
   flex-direction: column;
   align-items: $align;
 }

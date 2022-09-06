@@ -25,5 +25,6 @@
   .copyright {
     @include regularText();
     color: $second-text-color;
+    margin-left: 10px;
   }
 }
