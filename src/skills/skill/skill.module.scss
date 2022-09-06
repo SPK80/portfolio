@@ -2,7 +2,7 @@
 @import '../../common/styles/sass/mixins';
 
 .skill {
-  @include oneColumnContainer(240px, center);
+  @include oneColumnContainer($card-width, center);
   background-color: transparent;
   padding: 10px;
 
@@ -18,5 +18,11 @@
   .description {
     @include regularText();
     text-align: justify;
+  }
+
+  @media screen and (max-width: $laptop-max-width) {
+    & {
+      width: 100%;
+    }
   }
 }

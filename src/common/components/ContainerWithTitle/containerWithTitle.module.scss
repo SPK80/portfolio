@@ -7,4 +7,10 @@
   .contentContainer {
     @include boxContainer(100%, fit-content, space-between, flex-start);
   }
+
+  @media screen and (max-width: $laptop-max-width) {
+    .contentContainer {
+      justify-content: center;
+    }
+  }
 }

@@ -2,7 +2,7 @@
 @import '../../common/styles/sass/mixins';
 
 .project {
-  @include oneColumnContainer(264px, center);
+  @include oneColumnContainer($card-width, center);
   padding: 10px;
 
   div {
@@ -41,4 +41,5 @@
     font-style: italic;
     background-color: wheat;
   }
+
 }
