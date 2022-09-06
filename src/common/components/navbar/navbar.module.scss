@@ -1,0 +1,30 @@
+@import '../../styles/sass/variables';
+@import '../../styles/sass/mixins';
+
+.navbar {
+
+  button {
+
+  }
+
+  @media screen and (max-width: 430px) {
+    & {
+      position: absolute;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+  }
+}
+
+.navMenu {
+  display: flex;
+  justify-content: space-between;
+
+  a {
+    @include navText($nav-text-color);
+    width: 100%;
+    padding: 0.5em;
+    word-wrap: break-word;
+    cursor: pointer;
+  }
+}
