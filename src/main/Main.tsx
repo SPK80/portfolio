@@ -9,5 +9,9 @@ export const Main = () =>
             <h3 className={s.name}>I am Pavel Sukonkin</h3>
             <h3 className={s.job}>A front-end developer</h3>
         </div>
-        <img className={s.photo} src={photo} alt={'photo'}/>
+        <img
+            className={s.photo}
+            src={photo}
+            alt={'photo'}
+        />
     </div>
