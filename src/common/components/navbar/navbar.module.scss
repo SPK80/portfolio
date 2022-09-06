@@ -2,29 +2,45 @@
 @import '../../styles/sass/mixins';
 
 .navbar {
+  padding: 0 10%;
 
-  button {
+  .laptopNavbar {
+    display: none;
+    justify-content: left;
 
-  }
-
-  @media screen and (max-width: 430px) {
-    & {
-      position: absolute;
-      flex-direction: column;
-      justify-content: flex-start;
+    button {
+      font-size: 26px;
     }
   }
-}
 
-.navMenu {
-  display: flex;
-  justify-content: space-between;
-
-  a {
-    @include navText($nav-text-color);
+  nav {
+    display: flex;
     width: 100%;
-    padding: 0.5em;
-    word-wrap: break-word;
-    cursor: pointer;
+    justify-content: right;
+
+    a {
+      @include navText($nav-text-color);
+      width: fit-content;
+      padding: 0.5em;
+      cursor: pointer;
+    }
+  }
+
+  @media screen and (max-width: $laptop-max-width) {
+    .laptopNavbar {
+      display: flex;
+    }
+    .desktopNavbar {
+      display: none;
+    }
+    nav {
+      flex-direction: column;
+      align-items: flex-end;
+
+      a {
+        font-size: x-large;
+        padding: 5px;
+      }
+    }
   }
 }
