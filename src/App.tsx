@@ -5,7 +5,6 @@ import {Header} from "./header/Header";
 import {Main} from "./main/Main";
 import {Skills} from "./skills/Skills";
 import {Projects} from "./projects/Projects";
-import {RemoteWork} from "./remoteWork/RemoteWork";
 import {Contacts} from "./contacts/Contacts";
 import {Footer} from "./footer/Footer";
 
@@ -17,7 +16,7 @@ class App extends React.Component {
                 <Main/>
                 <Skills/>
                 <Projects/>
-                <RemoteWork/>
+                {/*<RemoteWork/>*/}
                 <Contacts/>
                 <Footer/>
             </div>
