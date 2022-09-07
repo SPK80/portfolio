@@ -29,4 +29,10 @@
     @include boxContainer(100%, 100%, normal, normal);
     margin-top: 20px;
   }
+
+  @media screen and (max-width: 700px) {
+    .formAndInfoContainer {
+      flex-direction: column;
+    }
+  }
 }
