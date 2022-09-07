@@ -6,10 +6,16 @@
   background-color: $contacts-background-color;
   border-radius: $container-border-radius;
   padding: 110px 100px;
-  margin-bottom: 50px;
-  max-width: 1000px;
+  margin: 50px 0;
+  max-width: 800px;
 
-  .encouragement {
+  @media screen and (max-width: 800px) {
+    & {
+      padding: 50px;
+    }
+  }
+
+  .title {
     letter-spacing: 0;
     font-family: $font-family-extra;
     font-weight: 600;
@@ -28,11 +34,14 @@
   .formAndInfoContainer {
     @include boxContainer(100%, 100%, normal, normal);
     margin-top: 20px;
-  }
 
-  @media screen and (max-width: 700px) {
-    .formAndInfoContainer {
-      flex-direction: column;
+    @media screen and (max-width: $laptop-max-width) {
+      & {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   }
+
+
 }

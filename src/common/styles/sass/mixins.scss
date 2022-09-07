@@ -28,6 +28,12 @@
   flex-wrap: wrap;
   justify-content: $justify;
   align-content: $align;
+
+  @media screen and (max-width: $laptop-max-width) {
+    & {
+      justify-content: center;
+    }
+  }
 }
 
 @mixin fullScreenContainer($justify, $align) {
@@ -51,6 +57,7 @@
   text-align: center;
   border-radius: 5px;
   background-color: $main-color;
+
   &:hover {
     background-color: $third-color;
     color: $secondary-color;
