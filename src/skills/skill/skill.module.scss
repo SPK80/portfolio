@@ -23,6 +23,7 @@
   @media screen and (max-width: $laptop-max-width) {
     & {
       width: 100%;
+      flex-wrap: nowrap;
     }
   }
 }

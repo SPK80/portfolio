@@ -1,15 +1,16 @@
-@import '../../styles/sass/variables';
-@import '../../styles/sass/mixins';
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
 
 .navbar {
   padding: 0 10%;
 
   .laptopNavbar {
     display: none;
-    justify-content: left;
+    justify-content: right;
 
     button {
-      font-size: 26px;
+      font-size: 28px;
+      padding: 5px 0 2px;
     }
   }
 

@@ -47,20 +47,29 @@
   align-items: $align;
 }
 
-@mixin submitButton() {
+@mixin button() {
   display: inline-block;
   @include titleText(18px, $third-color);
   text-transform: none;
   padding: 20px 40px;
   transition: all .3s ease;
-  width: 100%;
   text-align: center;
   border-radius: 5px;
-  background-color: $main-color;
 
   &:hover {
     background-color: $third-color;
     color: $secondary-color;
+  }
+}
+
+@mixin iconLink($size, $background-color) {
+  font-size: $size;
+  color: $main-color;
+  transition: all .3s ease;
+  background-color: $background-color;
+
+  &:hover {
+    color: $contacts-background-color;
   }
 }
 
