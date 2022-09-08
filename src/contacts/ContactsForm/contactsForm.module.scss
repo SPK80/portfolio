@@ -16,11 +16,6 @@
     max-width: 100%;
     min-width: 150px;
 
-    button {
-      @include submitButton();
-      margin: 5px 0;
-    }
-
     input[type=text], textarea {
       @include textInput();
       margin: 5px 0;
@@ -32,5 +27,12 @@
       padding: 19px 25px 25px;
       outline: none;
     }
+
+    .submitButton {
+      @include button();
+      width: 100%;
+      background-color: $main-color;
+    }
+
   }
 }

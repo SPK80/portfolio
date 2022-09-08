@@ -1,17 +1,26 @@
-import React, {CSSProperties} from "react";
+import React from "react";
 import s from './project.module.scss'
+import {ProjectDataType} from "../../bll/projectsData";
+import {AiFillGithub} from "react-icons/ai";
+import {GrDeploy} from "react-icons/gr";
 
-type SkillPropsType = {
-    title: string
-    description: string
-    style?: CSSProperties | undefined;
+type ProjectPropsType = {
+    projectData: ProjectDataType
 }
 
-export const Project: React.FC<SkillPropsType> = ({title, description, style}) =>
+export const Project: React.FC<ProjectPropsType> = ({projectData}) =>
     <div className={s.project}>
-        <div style={style}>
-            <a href="#">Show</a>
+        <div style={{backgroundImage: `url(${require('../../assets/' + projectData.image)})`}}>
+            <a className={s.deploymentLink}
+               href={projectData.deployment}>
+                <GrDeploy title="Deployment"/>
+            </a>
         </div>
-        <h3>{title}</h3>
-        <span>{description}</span>
+        <a className={s.repositoryButton}
+           href={projectData.repository}>
+            <AiFillGithub title="Repository"/>
+        </a>
+        <h3>{projectData.title}</h3>
+        <span>{projectData.description}</span>
+    
     </div>
