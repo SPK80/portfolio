@@ -1,6 +1,20 @@
 @import "src/common/styles/sass/variables";
 @import "src/common/styles/sass/mixins";
 
+@mixin link() {
+
+  padding: 5px 0;
+  width: 50%;
+  @include iconLink(30px, transparent);
+  color: $contacts-background-color;
+  border-radius: 0;
+
+  &:hover {
+    color: $work-background-color;
+    background: $contacts-background-color;
+  }
+}
+
 .project {
   width: $card-width;
   height: $card-width;
@@ -11,12 +25,12 @@
   display: flex;
   flex-direction: column;
 
-
   .title {
     width: 100%;
     height: fit-content;
     background: $work-background-color;
     text-align: center;
+    padding: 5px 0;
     @include titleText(18px, $third-color);
   }
 
@@ -33,27 +47,11 @@
     text-align: center;
 
     .deployment {
-      padding: 5px 0;
-      width: 50%;
-      @include iconLink(30px, transparent);
-      border-radius: 0;
-
-      &:hover {
-        color: $work-background-color;
-        background: $contacts-background-color;
-      }
+      @include link();
     }
 
     .repository {
-      padding: 5px 0;
-      width: 50%;
-      @include iconLink(30px, transparent);
-      border-radius: 0;
-
-      &:hover {
-        color: $work-background-color;
-        background: $contacts-background-color;
-      }
+      @include link();
     }
   }
 
