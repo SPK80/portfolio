@@ -4,7 +4,9 @@
 .mainContainer {
   @include fullScreenContainer(center, center);
   background-image: url("../assets/main-background.jpg");
+  background-size: cover;
   align-items: center;
+  min-height: 600px;
 
   .text {
     word-break: break-word;
