@@ -1,18 +1,14 @@
 import React from "react";
 import s from './skill.module.scss'
+import {SkillDataType} from "../../bll/skillsData";
 
 type SkillPropsType = {
-    title: string
-    description: string
-    iconJSX: JSX.Element
+    skillData: SkillDataType
 }
 
-export const Skill: React.FC<SkillPropsType> =
-    ({
-         title, description, iconJSX
-     }) =>
-        <div className={s.skill}>
-            <div className={s.icon}>{iconJSX}</div>
-            <div className={s.title}>{title}</div>
-            <p className={s.description}>{description}</p>
-        </div>
+export const Skill: React.FC<SkillPropsType> = ({skillData}) =>
+    <div className={s.skill}>
+        <div className={s.icon}>{(require('react-icons/si')[skillData.icon])()}</div>
+        <div className={s.title}>{skillData.title}</div>
+        <p className={s.description}>{skillData.description}</p>
+    </div>
