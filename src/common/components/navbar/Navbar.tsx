@@ -26,7 +26,7 @@ const LaptopNavbar: React.FC = () => {
 
 const NavMenu: React.FC<{ onClick?: () => void }> = ({onClick}) =>
     <nav onClick={onClick}>
-        <a href={"#main"}>Main</a>
+        <a href={"#main"}>Home</a>
         <a href={"#skills"}>Skills</a>
         <a href={"#projects"}>Projects</a>
         <a href={"#contacts"}>Contacts</a>

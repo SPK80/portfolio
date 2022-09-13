@@ -2,7 +2,7 @@
 @import "src/common/styles/sass/mixins";
 
 .navbar {
-  padding: 0 10%;
+  padding: 25px 10%;
 
   .laptopNavbar {
     display: none;
@@ -22,7 +22,7 @@
     a {
       @include navText($nav-text-color);
       width: fit-content;
-      padding: 0.5em;
+      margin-left: 35px;
       cursor: pointer;
     }
   }

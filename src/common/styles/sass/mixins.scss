@@ -62,6 +62,21 @@
   }
 }
 
+@mixin orangeRoundButton() {
+  background-color: $main-color;
+  @include titleText(18px, $third-color);
+  text-transform: none;
+  text-align: center;
+  padding: 20px 40px;
+  border-radius: 50px;
+  transition: all .3s ease;
+
+  &:hover {
+    background-color: $contacts-background-color;
+    color: $secondary-color;
+  }
+}
+
 @mixin iconLink($size, $background-color) {
   font-size: $size;
   color: $main-color;
