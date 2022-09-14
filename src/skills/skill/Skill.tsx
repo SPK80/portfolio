@@ -8,7 +8,9 @@ type SkillPropsType = {
 
 export const Skill: React.FC<SkillPropsType> = ({skillData}) =>
     <div className={s.skill}>
-        <div className={s.icon}>{(require('react-icons/si')[skillData.icon])()}</div>
-        <div className={s.title}>{skillData.title}</div>
-        <p className={s.description}>{skillData.description}</p>
+        <span className={s.title}>{skillData.title}</span>
+        <span className={s.number}>55%</span>
+        <div className={s.skillProgress}>
+            <div className={s.skillProgressInner}></div>
+        </div>
     </div>
