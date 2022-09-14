@@ -101,3 +101,8 @@
   vertical-align: middle;
   transition: all .3s ease;
 }
+
+@mixin boundingContainer() {
+  max-width: 1070px;
+  padding: 0 20px;
+}
