@@ -4,7 +4,14 @@ import {ContainerWithTitle} from "../common/components/ContainerWithTitle/Contai
 import {projectsData} from "../bll/projectsData";
 
 export const Projects = () =>
-    <ContainerWithTitle title="Projects" id="projects">
+    <ContainerWithTitle
+        title="Projects"
+        subTitle="Checkout My Recent Projects"
+        thesis="Dliquip ex ea commo do conse namber onequa ute irure dolor in reprehen derit in voluptate"
+        id="projects"
+        style={{marginBottom: 190}}
+        contentStyle={{marginTop: 77}}
+    >
         {
             projectsData.map((pd, index) =>
                 <Project
