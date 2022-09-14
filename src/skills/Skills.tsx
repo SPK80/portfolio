@@ -6,14 +6,16 @@ import s from "./skills.module.scss"
 
 export const Skills = () =>
     <ContainerWithTitle title="Skills" id="skills">
-        <div className={s.skills}>
-            {
-                skillsData.map((sd, index) =>
-                    <Skill
-                        key={index}
-                        skillData={sd}
-                    />
-                )
-            }
+        <div className={s.subTitle}>I regularly improve my skills</div>
+        <div className={s.text}>Dliquip ex ea commo do conse namber onequa ute irure dolor in reprehen derit in
+            voluptate
         </div>
+        {
+            skillsData.map((sd, index) =>
+                <Skill
+                    key={index}
+                    skillData={sd}
+                />
+            )
+        }
     </ContainerWithTitle>

@@ -3,6 +3,6 @@
 
 .title {
   @include titleText(20px, $main-color);
-  margin: 1em 0;
+  margin: 0;
   text-align: center;
 }

@@ -1,3 +1,30 @@
+@import '../common/styles/sass/variables';
+@import '../common/styles/sass/mixins';
+
 .skills {
+}
+
+.subTitle {
   width: 100%;
+  font-size: 35px;
+  margin-bottom: 20px;
+  line-height: 1.25;
+  font-family: $font-family-extra;
+  font-weight: 600;
+  text-align: center;
+  color: $secondary-color
+}
+
+.text {
+  width: 100%;
+  margin-bottom: 20px;
+  font-family: $font-family-main;
+  text-align: center;
+  color: $regular-text-color;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0;
+  word-wrap: break-word;
+  font-weight: 400;
+
 }

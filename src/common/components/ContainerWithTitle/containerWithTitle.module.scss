@@ -6,6 +6,5 @@
 
   .contentContainer {
     @include boxContainer(100%, fit-content, space-between, flex-start);
-    min-height: 100vh;
   }
 }

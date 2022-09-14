@@ -7,8 +7,10 @@ export const ContainerWithTitle: React.FC<{
     children: ReactNode,
     id?: string,
     contentStyle?: CSSProperties | undefined
-}> = ({title, children, id, contentStyle}) =>
-    <div id={id} className={s.container}>
+    className?: string | undefined;
+    
+}> = ({title, children, id, contentStyle, className}) =>
+    <div id={id} className={`${s.container} ${className}`}>
         <Title>{title}</Title>
         <div style={contentStyle} className={s.contentContainer}>{children}</div>
     </div>

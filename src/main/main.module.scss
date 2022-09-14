@@ -17,6 +17,7 @@ $main-laptop-max-width: 1000px;
   background-size: cover;
   background-position: right;
   overflow: hidden;
+  margin-bottom: 190px;
 
   .mainWrap {
     @include boundingContainer();
