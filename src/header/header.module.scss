@@ -1,11 +1,33 @@
 @import '../common/styles/sass/variables';
+@import '../common/styles/sass/mixins';
 
 .header {
-  position: fixed;
+  @include boundingContainer();
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  background-color: inherit;
-  border-bottom: solid 1px $line-color;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  img {
+    height: 32px;
+    border: solid 3px $work-background-color;
+    border-radius: 50%;
+  }
+
+  &:after {
+    content: "DevCat";
+    color: $third-color;
+    margin-left: 10px;
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+  }
 }

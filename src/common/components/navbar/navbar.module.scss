@@ -2,7 +2,7 @@
 @import "src/common/styles/sass/mixins";
 
 .navbar {
-  padding: 25px 10%;
+  //padding: 0 40px;
 
   .laptopNavbar {
     display: none;
@@ -11,6 +11,7 @@
     button {
       font-size: 28px;
       padding: 5px 0 2px;
+      color: $third-color;
     }
   }
 
@@ -20,7 +21,7 @@
     justify-content: right;
 
     a {
-      @include navText($nav-text-color);
+      @include navText($third-color);
       width: fit-content;
       margin-left: 35px;
       cursor: pointer;
