@@ -1,0 +1,15 @@
+@import '../../styles/sass/variables';
+@import '../../styles/sass/mixins';
+
+.thesis {
+  width: 100%;
+  margin-bottom: 20px;
+  font-family: $font-family-main;
+  text-align: center;
+  color: $regular-text-color;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0;
+  word-wrap: break-word;
+  font-weight: 400;
+}
