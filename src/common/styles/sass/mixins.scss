@@ -28,12 +28,6 @@
   flex-wrap: wrap;
   justify-content: $justify;
   align-content: $align;
-
-  @media screen and (max-width: $laptop-max-width) {
-    & {
-      justify-content: center;
-    }
-  }
 }
 
 @mixin fullScreenContainer($justify, $align) {

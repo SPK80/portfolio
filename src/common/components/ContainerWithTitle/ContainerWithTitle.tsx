@@ -12,16 +12,24 @@ export const ContainerWithTitle: React.FC<{
     id?: string,
     contentStyle?: CSSProperties | undefined
     style?: CSSProperties | undefined;
+    className?: string | undefined;
+    contentClassName?: string | undefined;
     
 }> = ({
           title, subTitle, thesis,
-          id, contentStyle, style,
+          id, contentStyle, style, className, contentClassName,
           children
       }) =>
-    <div id={id} style={style} className={s.container}>
+    
+    <div id={id} style={style} className={`${s.container} ${className}`}>
         <Title>{title}</Title>
         <SubTitle>{subTitle}</SubTitle>
         <Thesis>{thesis}</Thesis>
         
-        <div style={contentStyle} className={s.contentContainer}>{children}</div>
+        <div
+            style={contentStyle}
+            className={`${s.contentContainer} ${contentClassName}`}
+        >
+            {children}
+        </div>
     </div>
