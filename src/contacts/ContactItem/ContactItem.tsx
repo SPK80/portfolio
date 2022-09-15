@@ -3,9 +3,13 @@ import s from "./contactItem.module.scss"
 
 export const ContactItem: React.FC<{
     title: string,
-    children: ReactNode
-}> = ({title, children}) =>
+    children: ReactNode,
+    icon: string
+}> = ({title, children, icon}) =>
     <div className={s.contactItem}>
-        <div className={s.title}>{title}</div>
-        <div className={s.content}>{children}</div>
+        <div className={s.icon}>{icon}</div>
+        <div className={s.info}>
+            <div className={s.title}>{title}</div>
+            <div className={s.content}>{children}</div>
+        </div>
     </div>
