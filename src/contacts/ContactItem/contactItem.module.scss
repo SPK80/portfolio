@@ -7,12 +7,18 @@
   margin-bottom: 25px;
 
   .icon {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
     width: 85px;
     min-width: 85px;
     height: 85px;
     border-radius: 100%;
     background-color: $work-background-color;
+    font-size: 28px;
+    color: #fff;
+
   }
 
   .info {

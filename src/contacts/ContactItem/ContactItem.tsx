@@ -4,7 +4,7 @@ import s from "./contactItem.module.scss"
 export const ContactItem: React.FC<{
     title: string,
     children: ReactNode,
-    icon: string
+    icon: JSX.Element,
 }> = ({title, children, icon}) =>
     <div className={s.contactItem}>
         <div className={s.icon}>{icon}</div>
