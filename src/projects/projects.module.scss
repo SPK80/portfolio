@@ -1,0 +1,14 @@
+.projects {
+  margin-bottom: 190px;
+
+  .content {
+    margin-top: 77px;
+
+    @media screen and (max-width: 890px) {
+      & {
+        flex-direction: column;
+        align-content: center;
+      }
+    }
+  }
+}
