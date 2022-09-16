@@ -28,7 +28,7 @@
     }
   }
 
-  @media screen and (max-width: $laptop-max-width) {
+  @media screen and (max-width: $min-screen-width) {
     .laptopNavbar {
       display: flex;
     }

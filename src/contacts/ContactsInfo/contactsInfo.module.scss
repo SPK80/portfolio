@@ -3,7 +3,7 @@
 
 .contactsInfo {
   padding-left: 100px;
-  min-width: 150px;
+  min-width: 200px;
 
   @media screen and (max-width: 800px) {
     & {
@@ -11,7 +11,7 @@
     }
   }
 
-  @media screen and (max-width: $laptop-max-width) {
+  @media screen and (max-width: $mid-screen-width) {
     & {
       width: 100%;
       padding-left: 0;

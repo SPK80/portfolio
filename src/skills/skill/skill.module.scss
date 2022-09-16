@@ -49,7 +49,7 @@
   }
 
 
-  @media screen and (max-width: $laptop-max-width) {
+  @media screen and (max-width: $min-screen-width) {
     & {
       width: 100%;
       flex-wrap: nowrap;

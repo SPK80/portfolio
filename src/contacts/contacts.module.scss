@@ -2,26 +2,33 @@
 @import "src/common/styles/sass/mixins";
 
 .contactsContainer {
-  //@include oneColumnContainer(80vw, flex-start);
   display: flex;
   flex-direction: column;
   width: 100%;
   background-color: $contacts-background-color;
   border-radius: $container-border-radius;
   padding: 110px 100px;
-  margin: 50px 0;
+  margin: 0 20px 180px 20px;
   max-width: 1320px;
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: $max-screen-width) {
     & {
-      max-width: 800px;
+      max-width: $mid-screen-width - 40;
     }
   }
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: $mid-screen-width) {
+    & {
+      max-width: $min-screen-width - 40;
+      margin: 0 20px 140px 20px;
+    }
+  }
+
+  @media screen and (max-width: $min-screen-width) {
     & {
       padding: 50px 30px;
       max-width: 700px;
+      margin: 0 20px 140px 20px;
     }
   }
 
@@ -42,19 +49,15 @@
   }
 
   .formAndInfoContainer {
-    //@include boxContainer(100%, 100%, normal, normal);
     display: flex;
-    
     margin-top: 20px;
     flex-wrap: nowrap;
 
-    @media screen and (max-width: $laptop-max-width) {
+    @media screen and (max-width: $mid-screen-width) {
       & {
         flex-direction: column;
         align-items: center;
       }
     }
   }
-
-
 }

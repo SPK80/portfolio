@@ -1,10 +1,19 @@
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
+
+
 .projects {
-  margin-bottom: 190px;
+  margin-bottom: 155px;
+  @media screen and (max-width: $mid-screen-width) {
+    & {
+      margin-bottom: 115px;
+    }
+  }
 
   .content {
     margin-top: 77px;
 
-    @media screen and (max-width: 890px) {
+    @media screen and (max-width: $mid-screen-width) {
       & {
         flex-direction: column;
         align-content: center;

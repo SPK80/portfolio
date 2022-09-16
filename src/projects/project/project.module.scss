@@ -1,14 +1,13 @@
 @import "src/common/styles/sass/variables";
 @import "src/common/styles/sass/mixins";
 
-
 .project {
   display: flex;
   flex-direction: column;
-  width: $project-card-width;
-  height: $project-card-width;
+  width: $min-project-width;
+  height: $min-project-height;
   overflow: hidden;
-  background-size: $project-card-width $project-card-width;
+  background-size: $min-project-width $min-project-width;
   margin: 10px;
 
   .title {
@@ -37,19 +36,44 @@
 
   .image {
     width: 100%;
-    height: $project-card-height;
+    height: 100%;
     object-fit: cover;
     overflow: hidden;
     border-radius: 13px;
     margin-bottom: 20px;
-    background-size: $project-card-width $project-card-height;
+    background-size: $min-project-width $min-project-height;
     background-position: center;
     transition: background-size 0.3s;
 
     &:hover {
       transition: background-size 0.3s;
       background-position: center;
-      background-size: $project-card-width*1.1 $project-card-height*1.1;
+      background-size: $min-project-width*1.1 $min-project-height*1.1;
+    }
+  }
+
+
+  @media screen and (max-width: $max-screen-width) {
+    & {
+      width: $max-project-width;
+      height: $max-project-height;
+    }
+    .image {
+      background-size: $max-project-width $max-project-height;
+
+      &:hover {
+        background-size: $max-project-width*1.1 $max-project-height*1.1;
+      }
+    }
+  }
+
+  @media screen and (max-width: $mid-screen-width) {
+    & {
+    }
+  }
+
+  @media screen and (max-width: $min-screen-width) {
+    & {
     }
   }
 
