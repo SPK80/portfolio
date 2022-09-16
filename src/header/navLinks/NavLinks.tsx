@@ -1,9 +1,14 @@
 import React from "react";
 
-export const NavLinks: React.FC<{ className?: string | undefined }> = ({className}) =>
+type PropsType = {
+    className?: string | undefined
+    onClick?: () => void
+}
+
+export const NavLinks: React.FC<PropsType> = ({className, onClick}) =>
     <ul className={className}>
-        <li><a href={"#main"}>Home</a></li>
-        <li><a href={"#skills"}>Skills</a></li>
-        <li><a href={"#projects"}>Projects</a></li>
-        <li><a href={"#contacts"}>Contacts</a></li>
+        <li><a href={"#main"} onClick={onClick}>Home</a></li>
+        <li><a href={"#skills"} onClick={onClick}>Skills</a></li>
+        <li><a href={"#projects"} onClick={onClick}>Projects</a></li>
+        <li><a href={"#contacts"} onClick={onClick}>Contacts</a></li>
     </ul>
