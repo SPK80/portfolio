@@ -1,6 +1,9 @@
+@import '../../common/styles/sass/variables';
+@import '../../common/styles/sass/mixins';
+
 $menu__btn_size: 30px;
 .hamburgerMenu {
-  display: flex;
+  display: none;
 
   .menu__toggle {
     opacity: 0;
@@ -88,7 +91,6 @@ $menu__btn_size: 30px;
 
     transition-duration: .25s;
 
-
     a {
       display: block;
       padding: 12px 24px;
@@ -109,5 +111,9 @@ $menu__btn_size: 30px;
     }
   }
 
-
+  @media screen and (max-width: $mid-screen-width) {
+    & {
+      display: flex;
+    }
+  }
 }

@@ -1,0 +1,28 @@
+@import "../../common/styles/sass/variables";
+@import "../../common/styles/sass/mixins";
+
+.topMenu {
+
+  .menuBox {
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    font-family: $font-family-extra;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0;
+    color: $third-color;
+
+    a {
+      width: fit-content;
+      margin-left: 35px;
+      cursor: pointer;
+    }
+  }
+
+  @media screen and (max-width: $mid-screen-width) {
+    & {
+      display: none;
+    }
+  }
+}
