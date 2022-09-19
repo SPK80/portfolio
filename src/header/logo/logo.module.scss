@@ -1,0 +1,31 @@
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  img {
+    height: 32px;
+    border: solid 3px $work-background-color;
+    border-radius: 50%;
+  }
+
+  &:after {
+    content: "DevCat";
+    color: $third-color;
+    margin-left: 10px;
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+  }
+
+  @media screen and (max-width: $mid-screen-width) {
+    img {
+      height: 26px;
+    }
+    &:after {
+      color: $secondary-color;
+    }
+  }
+}
