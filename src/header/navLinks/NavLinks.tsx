@@ -1,12 +1,12 @@
 import React from "react";
+import s from './navLinks.module.scss'
 
 type PropsType = {
-    className?: string | undefined
     onClick?: () => void
 }
 
-export const NavLinks: React.FC<PropsType> = ({className, onClick}) =>
-    <ul className={className}>
+export const NavLinks: React.FC<PropsType> = ({onClick}) =>
+    <ul className={s.navLinks}>
         <li><a href={"#main"} onClick={onClick}>Home</a></li>
         <li><a href={"#skills"} onClick={onClick}>Skills</a></li>
         <li><a href={"#projects"} onClick={onClick}>Projects</a></li>
