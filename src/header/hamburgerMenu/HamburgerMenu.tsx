@@ -3,15 +3,18 @@ import s from "./hamburgerMenu.module.scss"
 import {NavLinks} from "../navLinks/NavLinks";
 import {Logo} from "../logo/Logo";
 
-export const HamburgerMenu: React.FC = () => {
+export const HamburgerMenu: React.FC<{ onClickLink?: (href: string) => void }> = ({onClickLink}) => {
     const [menuOpened, setMenuOpened] = useState(false)
-    const onLinkClick = () => setMenuOpened(false)
-    
+    const onLinkClick = (href: string) => {
+        setMenuOpened(false)
+        onClickLink && onClickLink(href)
+    }
+
     let buttonClass = s.hamburgerButton;
     let navLinksClass = s.navLinks;
     if (menuOpened) buttonClass = buttonClass + ' ' + s.xButton
     else navLinksClass = navLinksClass + ' ' + s.navLinksHide;
-    
+
     const onButtonClick = () => setMenuOpened(value => !value)
     return (
         <div className={s.hamburgerMenu}>
@@ -22,7 +25,7 @@ export const HamburgerMenu: React.FC = () => {
                     onClick={onButtonClick}
                 ><span></span></div>
             </div>
-            
+
             <div className={navLinksClass}>
                 <NavLinks onClick={onLinkClick}/>
             </div>
