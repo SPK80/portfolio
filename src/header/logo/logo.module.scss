@@ -7,17 +7,16 @@
 
   img {
     height: 32px;
-    border: solid 3px $work-background-color;
+    outline: solid 3px $work-background-color;
     border-radius: 50%;
   }
 
   &:after {
     content: "DevCat";
-    color: $third-color;
     margin-left: 10px;
     font-family: "Barlow", sans-serif;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 22px;
   }
 
   @media screen and (max-width: $mid-screen-width) {

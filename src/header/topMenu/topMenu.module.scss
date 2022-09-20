@@ -1,28 +1,28 @@
-@import "../../common/styles/sass/variables";
-@import "../../common/styles/sass/mixins";
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
 
 .topMenu {
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  display: flex;
+  justify-content: center;
 
-  .menuBox {
-    display: flex;
-    width: 100%;
-    justify-content: right;
-    font-family: $font-family-extra;
-    font-weight: 600;
-    font-size: 18px;
-    letter-spacing: 0;
-    color: $third-color;
-
-    a {
-      width: fit-content;
-      margin-left: 35px;
-      cursor: pointer;
-    }
-  }
+  color: $third-color;
+  background-color: transparent;
+  transition: all .4s ease;
 
   @media screen and (max-width: $mid-screen-width) {
     & {
       display: none;
     }
   }
+}
+
+
+.notTransparent {
+  background-color: $main-background-color;
+  color: $secondary-color;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }

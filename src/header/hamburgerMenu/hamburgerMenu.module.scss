@@ -1,114 +1,94 @@
-@import '../../common/styles/sass/variables';
-@import '../../common/styles/sass/mixins';
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
 
 $menu__btn_size: 30px;
+
 .hamburgerMenu {
   display: none;
+  flex-direction: column;
+  background-color: #fdfdfd;
 
-  .menu__toggle {
-    opacity: 0;
-    position: absolute;
-    z-index: 2;
-    width: $menu__btn_size;
-    height: $menu__btn_size;
-
-    &:checked ~ .menu__btn > span {
-      transform: rotate(45deg);
-    }
-
-    &:checked ~ .menu__btn > span::before {
-      top: 0;
-      transform: rotate(0);
-    }
-
-    &:checked ~ .menu__btn > span::after {
-      top: 0;
-      transform: rotate(90deg);
-    }
-
-    &:checked ~ .menu__box {
-      visibility: visible;
-      left: 0;
-    }
-
-  }
-
-  .menu__btn {
-    display: flex;
-    align-items: center;
-    position: relative;
-    //top: -$menu__btn_size;
-
-    width: $menu__btn_size;
-    height: $menu__btn_size;
-
-    cursor: pointer;
-    z-index: 1;
-  }
-
-  .menu__btn > span,
-  .menu__btn > span::before,
-  .menu__btn > span::after {
-    display: block;
-    position: absolute;
-
+  .topPanel {
     width: 100%;
-    height: 2px;
+    display: flex;
+    padding: 5px 20px;
+    justify-content: space-between;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.1);
 
-    background-color: #616161;
+    .hamburgerButton {
+      display: flex;
+      align-items: center;
+      position: relative;
+      width: $menu__btn_size;
+      height: $menu__btn_size;
+      cursor: pointer;
+      z-index: 1;
 
-    transition-duration: .25s;
-  }
+      span,
+      span::before,
+      span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #616161;
+        transition-duration: .25s;
+      }
 
-  .menu__btn > span::before {
-    content: '';
-    top: -8px;
-  }
+      span::before {
+        content: '';
+        top: -8px;
+      }
 
-  .menu__btn > span::after {
-    content: '';
-    top: 8px;
-  }
-
-  .menu__box {
-    display: block;
-    position: fixed;
-    z-index: 999;
-    visibility: hidden;
-    top: 0;
-    left: -100%;
-
-    width: 300px;
-    height: 100%;
-
-    margin: 0;
-    padding: 80px 0;
-
-    list-style: none;
-
-    background-color: #ECEFF1;
-    box-shadow: 1px 0 6px rgba(0, 0, 0, .2);
-
-    transition-duration: .25s;
-
-    a {
-      display: block;
-      padding: 12px 24px;
-
-      color: #333;
-
-      font-family: 'Roboto', sans-serif;
-      font-size: 20px;
-      font-weight: 600;
-
-      text-decoration: none;
-
-      transition-duration: .25s;
-
-      &:hover {
-        background-color: #CFD8DC;
+      span::after {
+        content: '';
+        top: 8px;
       }
     }
+
+    .xButton {
+      span {
+        transform: rotate(45deg);
+      }
+
+      span::before {
+        top: 0;
+        transform: rotate(0);
+      }
+
+      span::after {
+        top: 0;
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  .navLinks {
+    position: absolute;
+    flex-direction: column;
+    visibility: visible;
+    opacity: 1;
+    height: fit-content;
+    width: 100%;
+    top: 100%;
+    padding: 25px 40px;
+    background-color: $main-background-color;
+    transition-duration: .5s;
+
+    a {
+      font-family: $hamburger-font-family;
+      font-weight: 400;
+      font-size: 16px;
+      margin: 0;
+      text-decoration: none;
+      letter-spacing: 0;
+      color: $secondary-color;
+    }
+  }
+
+  .navLinksHide {
+    visibility: hidden;
+    opacity: 0;
   }
 
   @media screen and (max-width: $mid-screen-width) {
