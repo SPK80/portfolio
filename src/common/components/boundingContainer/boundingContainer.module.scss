@@ -1,0 +1,20 @@
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
+
+.boundingContainer {
+  max-width: 1400px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  padding: 0 40px;
+  position: relative;
+  clear: both;
+
+  @media (max-width: $max-screen-width) {
+    & {
+      max-width: 1070px;
+      padding: 0 20px;
+    }
+  }
+}

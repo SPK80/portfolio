@@ -1,0 +1,21 @@
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
+
+.container {
+  width: 100%;
+  height: auto;
+  background-color: #343c55;
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 57px 0 61px;
+  }
+
+  .copyright {
+    @include regularText();
+    color: $second-text-color;
+    margin-left: 10px;
+  }
+}

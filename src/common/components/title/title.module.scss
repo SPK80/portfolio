@@ -1,5 +1,5 @@
-@import '../../styles/sass/variables';
-@import '../../styles/sass/mixins';
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
 
 .title {
   @include titleText(20px, $main-color);

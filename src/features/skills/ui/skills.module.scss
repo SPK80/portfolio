@@ -1,0 +1,16 @@
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
+
+.container {
+  margin-bottom: 190px;
+
+  .skills {
+    margin-top: 77px;
+  }
+
+  @media screen and (max-width: $mid-screen-width) {
+    & {
+      margin-bottom: 150px;
+    }
+  }
+}

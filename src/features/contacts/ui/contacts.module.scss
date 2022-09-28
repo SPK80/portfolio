@@ -1,0 +1,63 @@
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: $contacts-background-color;
+  border-radius: $container-border-radius;
+  padding: 110px 100px;
+  margin: 0 auto 180px auto;
+  max-width: 1320px;
+
+  @media screen and (max-width: $max-screen-width) {
+    & {
+      max-width: $mid-screen-width - 40;
+    }
+  }
+
+  @media screen and (max-width: $mid-screen-width) {
+    & {
+      max-width: $min-screen-width - 40;
+      margin-bottom: 140px;
+    }
+  }
+
+  @media screen and (max-width: $min-screen-width) {
+    & {
+      padding: 50px 30px;
+      max-width: 700px;
+      margin-bottom: 140px;
+    }
+  }
+
+  .title {
+    letter-spacing: 0;
+    font-family: $font-family-extra;
+    font-weight: 600;
+
+    & div:nth-child(1) {
+      font-size: 20px;
+      color: $main-color;
+    }
+
+    & div:nth-child(2) {
+      font-size: 34px;
+      color: $third-color;
+    }
+  }
+
+  .formAndInfoContainer {
+    display: flex;
+    margin-top: 20px;
+    flex-wrap: nowrap;
+
+    @media screen and (max-width: $mid-screen-width) {
+      & {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+}

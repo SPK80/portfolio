@@ -1,0 +1,37 @@
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
+
+.topMenu {
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+
+  color: $third-color;
+  background-color: transparent;
+  transition: all .4s ease;
+
+  .contentWrap {
+    width: 100%;
+    height: auto;
+    clear: both;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @media screen and (max-width: $mid-screen-width) {
+    & {
+      display: none;
+    }
+  }
+}
+
+.notTransparent {
+  background-color: $main-background-color;
+  color: $secondary-color;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+}
