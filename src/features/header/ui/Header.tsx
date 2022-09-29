@@ -1,7 +1,7 @@
 import React, {RefObject} from "react";
 import s from './header.module.scss'
-import {TopMenu} from "../components/topMenu/TopMenu";
-import {HamburgerMenu} from "../components/hamburgerMenu/HamburgerMenu";
+import {TopMenu} from "./components/topMenu/TopMenu";
+import {HamburgerMenu} from "./components/hamburgerMenu/HamburgerMenu";
 
 type PropsType = {
   sectionsRefs: { [sectionAnchor: string]: RefObject<HTMLDivElement> }

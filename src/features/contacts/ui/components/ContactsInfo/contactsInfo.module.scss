@@ -1,0 +1,20 @@
+@import "../../../../../common/styles/sass/variables";
+@import "../../../../../common/styles/sass/mixins";
+
+.contactsInfo {
+  padding-left: 100px;
+  min-width: 200px;
+
+  @media screen and (max-width: 800px) {
+    & {
+      padding-left: 10px;
+    }
+  }
+
+  @media screen and (max-width: $mid-screen-width) {
+    & {
+      width: 100%;
+      padding-left: 0;
+    }
+  }
+}

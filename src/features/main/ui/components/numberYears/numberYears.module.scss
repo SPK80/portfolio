@@ -1,0 +1,31 @@
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
+
+.numberYears {
+  position: absolute;
+  background-color: $main-background-color;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  top: 50px;
+  left: 130px;
+  padding: 15px 20px 19px;
+  font-family: $font-family-extra;
+  font-weight: 700;
+
+  h3 {
+    font-size: 45px;
+    line-height: 1;
+    color: #50c5f0;
+  }
+
+  span {
+    font-size: 17px;
+    line-height: 1.2;
+    top: 1px;
+    padding-left: 12px;
+    color: #000;
+  }
+
+  @include hideOn($mid-screen-width);
+}

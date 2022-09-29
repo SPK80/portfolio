@@ -1,0 +1,75 @@
+@import "../../../../../common/styles/sass/variables";
+
+.project {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  width: $max-project-width;
+  height: auto;
+
+  .image {
+    width: 100%;
+    height: $max-project-height;
+    border-radius: 13px;
+    overflow: hidden;
+    background-size: 105%;
+    background-position: center;
+    margin-bottom: 20px;
+    transition: background-size 0.3s;
+
+    &:hover {
+      background-position: center;
+      background-size: 118%;
+      transition: background-size 0.3s;
+    }
+  }
+
+  .title {
+    width: 100%;
+    text-align: left;
+    font-family: $font-family-extra;
+    color: $main-color;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .description {
+    width: 100%;
+    text-align: left;
+    font-family: $font-family-extra;
+    color: $secondary-color;
+    font-size: 19px;
+    font-weight: 600;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $main-color;
+      transition: color 0.3s;
+    }
+  }
+
+  .links {
+    display: flex;
+    justify-content: center;
+    background: $work-background-color;
+    text-align: center;
+  }
+
+  @media screen and (max-width: $max-screen-width) {
+    & {
+      width: $mid-project-width;
+    }
+    .image {
+      height: $mid-project-height;
+    }
+  }
+
+  @media screen and (max-width: $mid-screen-width) {
+    & {
+      width: $min-project-width;
+    }
+    .image {
+      height: $min-project-height;
+    }
+  }
+}

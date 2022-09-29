@@ -1,0 +1,38 @@
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
+
+.numberProjects {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  background-color: $main-background-color;
+  border-radius: 8px;
+  bottom: 30px;
+  margin-left: -100px;
+  left: 590px;
+  padding: 13px 18px 17px;
+  font-family: $font-family-extra;
+  font-weight: 700;
+
+  & > span {
+    font-size: 17px;
+    line-height: 1.2;
+    top: 1px;
+    padding-left: 12px;
+    color: #000;
+  }
+
+  & > h3 {
+    font-size: 45px;
+    line-height: 1;
+    color: #f05c6e;
+
+    span:nth-child(2) {
+      position: relative;
+      top: -0.6em;
+      font-size: 28px;
+    }
+  }
+
+  @include hideOn($mid-screen-width);
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import s from './footer.module.scss'
-import {BoundingContainer} from "../../../common/components/boundingContainer/BoundingContainer";
+import {BoundingContainer} from "common/components/boundingContainer/BoundingContainer";
 
 export const Footer = () => (
   <div className={s.container}>

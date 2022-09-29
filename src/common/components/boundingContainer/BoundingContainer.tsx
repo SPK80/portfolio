@@ -1,7 +1,11 @@
-import React, {PropsWithChildren} from 'react';
+import React, {CSSProperties, PropsWithChildren} from 'react';
 import s from "./boundingContainer.module.scss";
 
-export const BoundingContainer: React.FC<PropsWithChildren> = ({children}) =>
-  <div className={s.boundingContainer}>
+type PropsType = PropsWithChildren & {
+  style?: CSSProperties | undefined
+}
+
+export const BoundingContainer: React.FC<PropsType> = ({children, style}) =>
+  <div style={style} className={s.boundingContainer}>
     {children}
   </div>

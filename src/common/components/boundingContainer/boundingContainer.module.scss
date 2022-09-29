@@ -2,18 +2,24 @@
 @import "src/common/styles/sass/mixins";
 
 .boundingContainer {
-  max-width: 1400px;
+  max-width: 1300px;
   width: 100%;
+  height: auto;
   margin-left: auto;
   margin-right: auto;
-  height: auto;
   padding: 0 40px;
   position: relative;
   clear: both;
 
   @media (max-width: $max-screen-width) {
     & {
-      max-width: 1070px;
+      max-width: $mid-screen-width;
+      padding: 0 20px;
+    }
+  }
+  @media (max-width: $mid-screen-width) {
+    & {
+      max-width: $min-screen-width;
       padding: 0 20px;
     }
   }

@@ -1,0 +1,11 @@
+@import "../../../common/styles/sass/variables";
+@import "../../../common/styles/sass/mixins";
+
+.decor {
+  position: absolute;
+  width: 110px;
+  height: 190px;
+  background-color: #142eb4;
+  border-radius: 12px;
+  @include hideOn($mid-screen-width);
+}

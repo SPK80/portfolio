@@ -96,11 +96,10 @@
   transition: all .3s ease;
 }
 
-//
-//@mixin boundingContainer() {
-//  max-width: 1070px;
-//  padding-left: 20px;
-//  padding-right: 20px;
-//  margin-left: auto;
-//  margin-right: auto;
-//}
+@mixin hideOn($max-width) {
+  @media screen and (max-width: $max-width) {
+    & {
+      display: none
+    }
+  }
+}
