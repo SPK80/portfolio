@@ -1,5 +1,5 @@
-@import "../../../../../common/styles/sass/variables";
-@import "../../../../../common/styles/sass/mixins";
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
 
 .contactsForm {
   width: 50%;
@@ -17,8 +17,17 @@
     min-width: 200px;
 
     input[type=text], textarea {
-      @include textInput();
+      @include regularText();
+      width: 100%;
+      height: 60px;
+      font-size: 18px;
+      border: none;
+      background-color: $third-color;
+      border-radius: 5px;
+      vertical-align: middle;
+      padding: 25px;
       margin: 5px 0;
+      transition: all .3s ease;
     }
 
     textarea {
@@ -27,12 +36,5 @@
       padding: 19px 25px 25px;
       outline: none;
     }
-
-    .submitButton {
-      @include button();
-      width: 100%;
-      background-color: $main-color;
-    }
-
   }
 }

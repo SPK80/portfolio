@@ -6,6 +6,7 @@ import {NumberYears} from "./components/numberYears/NumberYears";
 import {NumberProjects} from "./components/numberProjects/NumberProjects";
 import {Success} from "./components/success/Success";
 import {Counter} from "./components/counter/Counter";
+import {Link} from "../../../common/components/Link/Link";
 
 export const Main = () =>
   <div className={s.container}>
@@ -17,8 +18,8 @@ export const Main = () =>
           <div className={s.job}>A front-end developer</div>
           <div className={s.text}>Jodi kokhono vul hoye jai tumi oporadh nio na ptate velit esse cillum dolore</div>
           <div className={s.buttons}>
-            <a href="cv" download>Download CV</a>
-            <a href="#about">About Me</a>
+            <Link href="cv">Download CV</Link>
+            <Link href="#about">About Me</Link>
           </div>
         </div>
         <div className={s.photo}>

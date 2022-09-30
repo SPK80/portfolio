@@ -1,6 +1,6 @@
 import React from "react";
 import s from "./contactsForm.module.scss"
-import {Button} from "../../../../../common/components/button/Button";
+import {SubmitButton} from "common/components/SubmitButton/SubmitButton";
 
 export const ContactsForm: React.FC = () =>
   <div className={s.contactsForm}>
@@ -8,8 +8,8 @@ export const ContactsForm: React.FC = () =>
       <input type="text" name="name" placeholder="Name"/>
       <input type="text" name="email" placeholder="Email"/>
       <textarea name="message" placeholder="Message"></textarea>
-      <Button type={"submit"} className={s.submitButton}>
+      <SubmitButton>
         Send
-      </Button>
+      </SubmitButton>
     </form>
   </div>

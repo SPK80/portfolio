@@ -16,7 +16,7 @@ export const Counter: React.FC<PropsType> =
           return c
         })
       }, ms)
-    }, [])
+    }, [ms, until])
     const ch = counting as React.FC<{ count: number }>
     return (
       <>

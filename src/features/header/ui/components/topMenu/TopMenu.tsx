@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import s from "./topMenu.module.scss"
 import {Logo} from "../logo/Logo";
-import {BoundingContainer} from "../../../../../common/components/boundingContainer/BoundingContainer";
+import {BoundingContainer} from "common/components/boundingContainer/BoundingContainer";
 import {NavLinks} from "../navLinks/NavLinks";
 
 export const TopMenu: React.FC<{ onClickLink?: (href: string) => void }> = ({onClickLink}) => {

@@ -14,7 +14,6 @@ export const NavLinks: React.FC<{ onClick?: (href: string) => void }> = ({onClic
 
 const NavLink: React.FC<{ href: string, onClick: (href: string) => void, children: ReactNode }> =
   ({href, onClick, children}) => {
-    
     const onClickHandler = () => onClick(href)
     return <a onClick={onClickHandler}>{children}</a>
   }

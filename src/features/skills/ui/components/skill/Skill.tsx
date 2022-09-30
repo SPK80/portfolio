@@ -1,6 +1,6 @@
 import React from "react";
 import s from './skill.module.scss'
-import {SkillDataType} from "../../../../../common/bll/skillsData";
+import {SkillDataType} from "common/bll/skillsData";
 
 export const Skill: React.FC<{ skillData: SkillDataType }> = ({skillData}) =>
   <div className={s.skill}>

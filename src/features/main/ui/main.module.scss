@@ -94,7 +94,17 @@
 
       :nth-child(1) {
         display: inline-block;
-        @include orangeRoundButton();
+        background-color: $main-color;
+        @include titleText(18px, $third-color);
+        text-transform: none;
+        text-align: center;
+        padding: 20px 40px;
+        border-radius: 50px;
+        transition: all .3s ease;
+
+        &:hover {
+          background-color: $contacts-background-color;
+        }
       }
 
       :nth-child(2) {

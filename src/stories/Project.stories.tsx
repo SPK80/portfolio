@@ -1,7 +1,7 @@
 import React from 'react';
 import {ComponentStory, ComponentMeta} from '@storybook/react';
-import {projectsData} from "../common/bll/projectsData";
-import {Project} from "../features/projects/ui/components/project/Project";
+import {projectsData} from "common/bll/projectsData";
+import {Project} from "features/projects/ui/components/project/Project";
 
 export default {
   title: 'Portfolio/Project',

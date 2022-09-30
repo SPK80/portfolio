@@ -1,14 +1,12 @@
-@import "../../../../../common/styles/sass/variables";
-@import "../../../../../common/styles/sass/mixins";
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
 
 .skill {
-  @include oneColumnContainer(100%, center);
-  background-color: transparent;
+  display: flex;
+  flex-direction: column;
   padding: 10px;
-  align-items: flex-start;
-  position: relative;
   margin-top: 10px;
-
+  
   .title {
     font-family: $font-family-extra;
     font-weight: 600;
