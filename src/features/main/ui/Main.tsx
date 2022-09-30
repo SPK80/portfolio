@@ -5,6 +5,7 @@ import {BoundingContainer} from "common/components/boundingContainer/BoundingCon
 import {NumberYears} from "./components/numberYears/NumberYears";
 import {NumberProjects} from "./components/numberProjects/NumberProjects";
 import {Success} from "./components/success/Success";
+import {Counter} from "./components/counter/Counter";
 
 export const Main = () =>
   <div className={s.container}>
@@ -22,9 +23,9 @@ export const Main = () =>
         </div>
         <div className={s.photo}>
           <img src={photo} alt=""/>
-          <NumberYears amount={2}/>
+          <Counter until={2} ms={500} counting={NumberYears}/>
           <Success/>
-          <NumberProjects amount={10}/>
+          <Counter until={10} ms={100} counting={NumberProjects}/>
         </div>
       </div>
     </BoundingContainer>
