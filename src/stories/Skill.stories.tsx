@@ -11,5 +11,5 @@ export default {
 const Template: ComponentStory<typeof Skill> = (args) =>
   <Skill {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {skillData: {title: "SuperSkill", icon: "", description: "Super Skill"}};
+export const SuperSkill = Template.bind({});
+SuperSkill.args = {skillData: {title: "SuperSkill", icon: "", description: "Super Skill"}};

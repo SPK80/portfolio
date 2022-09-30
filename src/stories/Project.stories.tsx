@@ -12,5 +12,5 @@ export default {
 const Template: ComponentStory<typeof Project> = (args) =>
   <Project {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {projectData: projectsData[2]};
+export const CounterProject = Template.bind({});
+CounterProject.args = {projectData: projectsData[2]};
